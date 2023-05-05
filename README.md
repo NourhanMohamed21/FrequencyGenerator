@@ -1,4 +1,4 @@
-## Frequency-Generator
+## 8051-Frequency-Generator
 ## Contributors:
  - [Mohammad Helaly](https://github.com/MohammadHelaly)
  - [Nourhan Mohamed](https://github.com/NourhanMohamed21)
