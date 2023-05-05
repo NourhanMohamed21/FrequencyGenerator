@@ -1,0 +1,1 @@
+"kotp.c" OPTIMIZE (8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\kotp.lst) TABS (2) OBJECT(.\Objects\kotp.obj)
