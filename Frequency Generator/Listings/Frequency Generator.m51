@@ -1,9 +1,9 @@
-BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    04/25/2023  14:48:36  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    05/06/2023  23:20:59  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
-C:\PROGRAM FILES\KEIL\C51\BIN\BL51.EXE .\Objects\STARTUP.obj, .\Objects\Frequency Generator.obj TO .\Objects\Frequency G
->> enerator PRINT (.\Listings\Frequency Generator.m51)
+C:\PROGRAM FILES\KEIL\C51\BIN\BL51.EXE .\Objects\STARTUP.obj, .\Objects\Frequency Generator Proteus v2.obj TO .\Objects\
+>> Frequency Generator PRINT (.\Listings\Frequency Generator.m51)
 
 
 MEMORY MODEL: SMALL WITH FLOATING POINT ARITHMETIC
@@ -11,7 +11,7 @@ MEMORY MODEL: SMALL WITH FLOATING POINT ARITHMETIC
 
 INPUT MODULES INCLUDED:
   .\Objects\STARTUP.obj (?C_STARTUP)
-  .\Objects\Frequency Generator.obj (FREQUENCY_GENERATOR)
+  .\Objects\Frequency Generator Proteus v2.obj (FREQUENCY_GENERATOR_PROTEUS_V2)
   C:\PROGRAM FILES\KEIL\C51\LIB\C51FPS.LIB (?C?FPADD)
   C:\PROGRAM FILES\KEIL\C51\LIB\C51FPS.LIB (?C?FPDIV)
   C:\PROGRAM FILES\KEIL\C51\LIB\C51FPS.LIB (?C?FPCMP)
@@ -32,9 +32,9 @@ LINK MAP OF MODULE:  .\Objects\Frequency Generator (?C_STARTUP)
 
             * * * * * * *   D A T A   M E M O R Y   * * * * * * *
             REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
-            DATA    0008H     0016H     UNIT         ?DT?FREQUENCY_GENERATOR
-            DATA    001EH     0008H     UNIT         _DATA_GROUP_
-            IDATA   0026H     0001H     UNIT         ?STACK
+            DATA    0008H     0017H     UNIT         ?DT?FREQUENCY_GENERATOR_PROTEUS_V2
+            DATA    001FH     0008H     UNIT         _DATA_GROUP_
+            IDATA   0027H     0001H     UNIT         ?STACK
 
             * * * * * * *   C O D E   M E M O R Y   * * * * * * *
             CODE    0000H     0003H     ABSOLUTE     
@@ -45,21 +45,21 @@ LINK MAP OF MODULE:  .\Objects\Frequency Generator (?C_STARTUP)
             CODE    001BH     0003H     ABSOLUTE     
                     001EH     07E2H                  *** GAP ***
             CODE    0800H     03E6H     UNIT         ?C?LIB_CODE
-            CODE    0BE6H     019AH     UNIT         ?PR?FREQGENERATOR?FREQUENCY_GENERATOR
-            CODE    0D80H     009DH     UNIT         ?PR?KEYPAD_SCAN?FREQUENCY_GENERATOR
+            CODE    0BE6H     019AH     UNIT         ?PR?FREQGENERATOR?FREQUENCY_GENERATOR_PROTEUS_V2
+            CODE    0D80H     009DH     UNIT         ?PR?KEYPAD_SCAN?FREQUENCY_GENERATOR_PROTEUS_V2
             CODE    0E1DH     008CH     UNIT         ?C_C51STARTUP
-            CODE    0EA9H     0086H     UNIT         ?PR?DISPLAY?FREQUENCY_GENERATOR
-            CODE    0F2FH     0041H     UNIT         ?PR?KEYPRESSED?FREQUENCY_GENERATOR
-            CODE    0F70H     0041H     UNIT         ?PR?MAIN?FREQUENCY_GENERATOR
-            CODE    0FB1H     0025H     UNIT         ?C_INITSEG
-            CODE    0FD6H     0018H     UNIT         ?PR?TIMER1_FREQGENRATION?FREQUENCY_GENERATOR
-            CODE    0FEEH     0010H     UNIT         ?PR?DEBOUNCE?FREQUENCY_GENERATOR
-            CODE    0FFEH     0004H     UNIT         ?CO?FREQUENCY_GENERATOR
+            CODE    0EA9H     0076H     UNIT         ?PR?DISPLAY?FREQUENCY_GENERATOR_PROTEUS_V2
+            CODE    0F1FH     005EH     UNIT         ?PR?KEYPRESSED?FREQUENCY_GENERATOR_PROTEUS_V2
+            CODE    0F7DH     0041H     UNIT         ?PR?MAIN?FREQUENCY_GENERATOR_PROTEUS_V2
+            CODE    0FBEH     0028H     UNIT         ?C_INITSEG
+            CODE    0FE6H     0018H     UNIT         ?PR?TIMER1_FREQGENRATION?FREQUENCY_GENERATOR_PROTEUS_V2
+            CODE    0FFEH     0010H     UNIT         ?PR?DEBOUNCE?FREQUENCY_GENERATOR_PROTEUS_V2
+            CODE    100EH     0004H     UNIT         ?CO?FREQUENCY_GENERATOR_PROTEUS_V2
 
 
 
 OVERLAY MAP OF MODULE:   .\Objects\Frequency Generator (?C_STARTUP)
-BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  04/25/2023  14:48:36  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  05/06/2023  23:20:59  PAGE 2
 
 
 
@@ -68,26 +68,27 @@ SEGMENT                                            DATA_GROUP
   +--> CALLED SEGMENT                            START    LENGTH
 ----------------------------------------------------------------
 ?C_C51STARTUP                                    -----    -----
-  +--> ?PR?MAIN?FREQUENCY_GENERATOR
+  +--> ?PR?MAIN?FREQUENCY_GENERATOR_PROTEUS_V2
   +--> ?C_INITSEG
 
-?PR?MAIN?FREQUENCY_GENERATOR                     -----    -----
-  +--> ?PR?KEYPAD_SCAN?FREQUENCY_GENERATOR
+?PR?MAIN?FREQUENCY_GENERATOR_PROTEUS_V2          -----    -----
+  +--> ?PR?KEYPAD_SCAN?FREQUENCY_GENERATOR_P...
 
-?PR?KEYPAD_SCAN?FREQUENCY_GENERATOR              -----    -----
-  +--> ?PR?DEBOUNCE?FREQUENCY_GENERATOR
-
-*** NEW ROOT ***************************************************
-
-?PR?KEYPRESSED?FREQUENCY_GENERATOR               -----    -----
-  +--> ?PR?FREQGENERATOR?FREQUENCY_GENERATOR
-
-?PR?FREQGENERATOR?FREQUENCY_GENERATOR            001EH    0004H
+?PR?KEYPAD_SCAN?FREQUENCY_GENERATOR_P...         -----    -----
+  +--> ?PR?DEBOUNCE?FREQUENCY_GENERATOR_PROT...
 
 *** NEW ROOT ***************************************************
 
-?PR?DISPLAY?FREQUENCY_GENERATOR                  0022H    0004H
-  +--> ?CO?FREQUENCY_GENERATOR
+?PR?KEYPRESSED?FREQUENCY_GENERATOR_PR...         -----    -----
+  +--> ?PR?FREQGENERATOR?FREQUENCY_GENERATOR...
+  +--> ?PR?DEBOUNCE?FREQUENCY_GENERATOR_PROT...
+
+?PR?FREQGENERATOR?FREQUENCY_GENERATOR...         001FH    0004H
+
+*** NEW ROOT ***************************************************
+
+?PR?DISPLAY?FREQUENCY_GENERATOR_PROTE...         0023H    0004H
+  +--> ?CO?FREQUENCY_GENERATOR_PROTEUS_V2
 
 
 
@@ -98,7 +99,7 @@ SYMBOL TABLE OF MODULE:  .\Objects\Frequency Generator (?C_STARTUP)
 
   -------         MODULE        ?C_STARTUP
   C:0E1DH         SEGMENT       ?C_C51STARTUP
-  I:0026H         SEGMENT       ?STACK
+  I:0027H         SEGMENT       ?STACK
   C:0000H         PUBLIC        ?C_STARTUP
   D:00E0H         SYMBOL        ACC
   D:00F0H         SYMBOL        B
@@ -118,10 +119,10 @@ SYMBOL TABLE OF MODULE:  .\Objects\Frequency Generator (?C_STARTUP)
   D:0081H         SYMBOL        SP
   C:0E1DH         SYMBOL        STARTUP1
   N:0000H         SYMBOL        XBPSTACK
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  05/06/2023  23:20:59  PAGE 3
+
+
   N:0000H         SYMBOL        XBPSTACKTOP
-BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  04/25/2023  14:48:36  PAGE 3
-
-
   N:0000H         SYMBOL        XDATALEN
   N:0000H         SYMBOL        XDATASTART
   C:0000H         LINE#         126
@@ -133,7 +134,7 @@ SYMBOL TABLE OF MODULE:  .\Objects\Frequency Generator (?C_STARTUP)
   C:0E26H         LINE#         196
   -------         ENDMOD        ?C_STARTUP
 
-  -------         MODULE        FREQUENCY_GENERATOR
+  -------         MODULE        FREQUENCY_GENERATOR_PROTEUS_V2
   C:0000H         SYMBOL        _ICE_DUMMY_
   D:0080H         PUBLIC        P0
   D:0090H         PUBLIC        P1
@@ -152,18 +153,20 @@ SYMBOL TABLE OF MODULE:  .\Objects\Frequency Generator (?C_STARTUP)
   D:0081H         PUBLIC        SP
   B:0090H.2       PUBLIC        r2
   B:0090H.3       PUBLIC        r3
-  C:0F2FH         PUBLIC        keyPressed
-  C:0F70H         PUBLIC        main
+  C:0F1FH         PUBLIC        keyPressed
+  D:000FH         PUBLIC        reset
+  C:0F7DH         PUBLIC        main
   C:0D80H         PUBLIC        KeyPad_Scan
   D:0089H         PUBLIC        TMOD
-  D:000FH         PUBLIC        temp
-  D:0010H         SYMBOL        Last_valid_Key_G
-  C:0FFEH         SYMBOL        _?ix1000
-  D:0011H         PUBLIC        arr
-  D:001BH         PUBLIC        highVal
+  D:0010H         PUBLIC        temp
+  D:0011H         SYMBOL        Last_valid_Key_G
+  C:100EH         SYMBOL        _?ix1000
+  D:0012H         PUBLIC        arr
+  D:001CH         PUBLIC        highVal
   B:00A8H.1       PUBLIC        ET0
-  C:0FEEH         PUBLIC        debounce
+  C:0FFEH         PUBLIC        debounce
   B:00A8H.3       PUBLIC        ET1
+  B:0088H.7       PUBLIC        TF1
   D:008CH         PUBLIC        TH0
   B:00A8H.0       PUBLIC        EX0
   B:0088H.0       PUBLIC        IT0
@@ -174,29 +177,25 @@ SYMBOL TABLE OF MODULE:  .\Objects\Frequency Generator (?C_STARTUP)
   B:0088H.4       PUBLIC        TR0
   B:0088H.6       PUBLIC        TR1
   C:0BE6H         PUBLIC        freqGenerator
-  C:0FD6H         PUBLIC        Timer1_freqGenration
-  B:0080H.0       PUBLIC        Tr1
-  B:0080H.1       PUBLIC        Tr2
-  D:001CH         PUBLIC        lowVal
-  B:0080H.2       PUBLIC        Tr3
-BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  04/25/2023  14:48:36  PAGE 4
+  C:0FE6H         PUBLIC        Timer1_freqGenration
+  D:001DH         PUBLIC        lowVal
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  05/06/2023  23:20:59  PAGE 4
 
 
   C:0EA9H         PUBLIC        display
-  B:0080H.3       PUBLIC        Tr4
-  D:001DH         PUBLIC        position
+  D:001EH         PUBLIC        position
   -------         PROC          DEBOUNCE
   -------         DO            
   D:0007H         SYMBOL        i
   D:0006H         SYMBOL        j
   -------         ENDDO         
-  C:0FEEH         LINE#         30
-  C:0FEEH         LINE#         31
-  C:0FEEH         LINE#         32
-  C:0FF0H         LINE#         33
-  C:0FF2H         LINE#         34
-  C:0FF2H         LINE#         35
-  C:0FFDH         LINE#         36
+  C:0FFEH         LINE#         30
+  C:0FFEH         LINE#         31
+  C:0FFEH         LINE#         32
+  C:1000H         LINE#         33
+  C:1002H         LINE#         34
+  C:1002H         LINE#         35
+  C:100DH         LINE#         36
   -------         ENDPROC       DEBOUNCE
   -------         PROC          KEYPAD_SCAN
   -------         DO            
@@ -239,10 +238,10 @@ SYMBOL TABLE OF MODULE:  .\Objects\Frequency Generator (?C_STARTUP)
   C:0E09H         LINE#         82
   C:0E09H         LINE#         85
   C:0E0DH         LINE#         86
-BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  04/25/2023  14:48:36  PAGE 5
-
-
   C:0E0DH         LINE#         87
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  05/06/2023  23:20:59  PAGE 5
+
+
   C:0E11H         LINE#         88
   C:0E11H         LINE#         89
   C:0E13H         LINE#         90
@@ -254,20 +253,20 @@ SYMBOL TABLE OF MODULE:  .\Objects\Frequency Generator (?C_STARTUP)
   C:0E1CH         LINE#         96
   -------         ENDPROC       KEYPAD_SCAN
   -------         PROC          TIMER1_FREQGENRATION
-  C:0FD6H         LINE#         99
-  C:0FD8H         LINE#         101
-  C:0FDBH         LINE#         102
-  C:0FDEH         LINE#         103
-  C:0FE2H         LINE#         104
-  C:0FE4H         LINE#         105
-  C:0FE7H         LINE#         106
-  C:0FE9H         LINE#         107
-  C:0FEBH         LINE#         108
+  C:0FE6H         LINE#         99
+  C:0FE8H         LINE#         101
+  C:0FEBH         LINE#         102
+  C:0FEEH         LINE#         103
+  C:0FF2H         LINE#         104
+  C:0FF4H         LINE#         105
+  C:0FF7H         LINE#         106
+  C:0FF9H         LINE#         107
+  C:0FFBH         LINE#         108
   -------         ENDPROC       TIMER1_FREQGENRATION
   -------         PROC          FREQGENERATOR
   -------         DO            
   D:0006H         SYMBOL        delay
-  D:001EH         SYMBOL        delayTime
+  D:001FH         SYMBOL        delayTime
   D:0002H         SYMBOL        freq
   -------         ENDDO         
   C:0BE6H         LINE#         111
@@ -282,10 +281,10 @@ SYMBOL TABLE OF MODULE:  .\Objects\Frequency Generator (?C_STARTUP)
   C:0C7CH         LINE#         125
   C:0C87H         LINE#         126
   C:0C90H         LINE#         127
-  C:0C9AH         LINE#         128
-  C:0CA3H         LINE#         129
-  C:0CAEH         LINE#         130
-  C:0CB7H         LINE#         131
+  C:0C9BH         LINE#         128
+  C:0CA4H         LINE#         129
+  C:0CAFH         LINE#         130
+  C:0CB8H         LINE#         131
   C:0CC2H         LINE#         133
   C:0CCEH         LINE#         135
   C:0D04H         LINE#         136
@@ -299,78 +298,87 @@ SYMBOL TABLE OF MODULE:  .\Objects\Frequency Generator (?C_STARTUP)
   C:0D5DH         LINE#         144
   C:0D5EH         LINE#         146
   C:0D5EH         LINE#         148
-BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  04/25/2023  14:48:36  PAGE 6
-
-
   C:0D76H         LINE#         150
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  05/06/2023  23:20:59  PAGE 6
+
+
   C:0D79H         LINE#         151
   C:0D7CH         LINE#         152
   C:0D7FH         LINE#         153
   C:0D7FH         LINE#         154
   -------         ENDPROC       FREQGENERATOR
   -------         PROC          KEYPRESSED
-  C:0F2FH         LINE#         157
-  C:0F4CH         LINE#         159
-  C:0F4EH         LINE#         161
-  C:0F51H         LINE#         163
-  C:0F53H         LINE#         164
-  C:0F55H         LINE#         165
+  C:0F1FH         LINE#         157
+  C:0F3CH         LINE#         159
+  C:0F40H         LINE#         160
+  C:0F40H         LINE#         162
+  C:0F43H         LINE#         164
+  C:0F45H         LINE#         165
+  C:0F48H         LINE#         166
+  C:0F4AH         LINE#         168
+  C:0F4AH         LINE#         169
+  C:0F4CH         LINE#         170
+  C:0F4EH         LINE#         171
+  C:0F50H         LINE#         172
+  C:0F53H         LINE#         173
+  C:0F56H         LINE#         174
+  C:0F59H         LINE#         175
+  C:0F5CH         LINE#         176
+  C:0F5FH         LINE#         177
+  C:0F5FH         LINE#         178
+  C:0F62H         LINE#         179
   -------         ENDPROC       KEYPRESSED
   -------         PROC          DISPLAY
   -------         DO            
-  D:0022H         SYMBOL        digits
+  D:0023H         SYMBOL        digits
   -------         ENDDO         
-  C:0EA9H         LINE#         168
-  C:0EC6H         LINE#         171
-  C:0ED9H         LINE#         173
-  C:0EDCH         LINE#         174
-  C:0EDFH         LINE#         176
-  C:0EE6H         LINE#         177
-  C:0EECH         LINE#         178
-  C:0EF2H         LINE#         179
-  C:0EF8H         LINE#         180
-  C:0EFEH         LINE#         182
-  C:0F0AH         LINE#         183
-  C:0F0CH         LINE#         184
-  C:0F11H         LINE#         185
-  C:0F14H         LINE#         186
-  C:0F14H         LINE#         187
+  C:0EA9H         LINE#         182
+  C:0EC6H         LINE#         185
+  C:0ED9H         LINE#         187
+  C:0EDCH         LINE#         188
+  C:0EDFH         LINE#         190
+  C:0EEEH         LINE#         192
+  C:0EFAH         LINE#         193
+  C:0EFCH         LINE#         194
+  C:0F01H         LINE#         195
+  C:0F04H         LINE#         196
+  C:0F04H         LINE#         197
   -------         ENDPROC       DISPLAY
   -------         PROC          MAIN
-  C:0F70H         LINE#         189
-  C:0F70H         LINE#         190
-  C:0F70H         LINE#         191
-  C:0F73H         LINE#         193
-  C:0F7BH         LINE#         195
-  C:0F7DH         LINE#         196
-  C:0F7FH         LINE#         197
-  C:0F82H         LINE#         198
-  C:0F85H         LINE#         200
-  C:0F87H         LINE#         201
-  C:0F89H         LINE#         203
-  C:0F8BH         LINE#         204
-  C:0F8EH         LINE#         205
-  C:0F91H         LINE#         206
-  C:0F93H         LINE#         207
-  C:0F95H         LINE#         209
-  C:0F97H         LINE#         210
-  C:0F99H         LINE#         211
-  C:0F9BH         LINE#         212
-  C:0F9DH         LINE#         214
-  C:0F9DH         LINE#         215
-  C:0F9DH         LINE#         217
-BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  04/25/2023  14:48:36  PAGE 7
+  C:0F7DH         LINE#         199
+  C:0F7DH         LINE#         200
+  C:0F7DH         LINE#         201
+  C:0F80H         LINE#         203
+  C:0F88H         LINE#         205
+  C:0F8AH         LINE#         206
+  C:0F8CH         LINE#         207
+  C:0F8FH         LINE#         208
+  C:0F92H         LINE#         210
+  C:0F94H         LINE#         211
+  C:0F96H         LINE#         213
+  C:0F98H         LINE#         214
+  C:0F9BH         LINE#         215
+  C:0F9EH         LINE#         216
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  05/06/2023  23:20:59  PAGE 7
 
 
-  C:0FA3H         LINE#         218
-  C:0FA3H         LINE#         220
+  C:0FA0H         LINE#         217
+  C:0FA2H         LINE#         219
+  C:0FA4H         LINE#         220
   C:0FA6H         LINE#         221
-  C:0FA9H         LINE#         222
-  C:0FACH         LINE#         223
-  C:0FAFH         LINE#         224
-  C:0FAFH         LINE#         225
+  C:0FA8H         LINE#         222
+  C:0FAAH         LINE#         224
+  C:0FAAH         LINE#         225
+  C:0FAAH         LINE#         227
+  C:0FB0H         LINE#         228
+  C:0FB0H         LINE#         230
+  C:0FB3H         LINE#         231
+  C:0FB6H         LINE#         232
+  C:0FB9H         LINE#         233
+  C:0FBCH         LINE#         234
+  C:0FBCH         LINE#         235
   -------         ENDPROC       MAIN
-  -------         ENDMOD        FREQUENCY_GENERATOR
+  -------         ENDMOD        FREQUENCY_GENERATOR_PROTEUS_V2
 
   -------         MODULE        ?C?FPADD
   C:0807H         PUBLIC        ?C?FPADD
@@ -409,8 +417,11 @@ SYMBOL TABLE OF MODULE:  .\Objects\Frequency Generator (?C_STARTUP)
   -------         ENDMOD        ?C?LNEG
 
 ******************************************************************************
-* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 03A7H BYTE (45%) *
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 03B7H BYTE (46%) *
 ******************************************************************************
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  05/06/2023  23:20:59  PAGE 8
 
-Program Size: data=39.0 xdata=0 code=2062
+
+
+Program Size: data=40.0 xdata=0 code=2078
 LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
