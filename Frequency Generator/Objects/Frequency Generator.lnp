@@ -1,4 +1,4 @@
 ".\Objects\STARTUP.obj",
-".\Objects\Frequency Generator.obj" 
+".\Objects\Frequency Generator Proteus v2.obj" 
 TO ".\Objects\Frequency Generator" 
 PRINT(".\Listings\Frequency Generator.m51")
